@@ -65,11 +65,11 @@ public class ToyLottery {
             return;
         }
 
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 35; i++) {
             Toy winningToy = getToy();
             if (winningToy != null) {
                 try {
-                    fileWriter.write((i+1) + ". Призовая игрушка: " + winningToy.name + "\n");
+                    fileWriter.write((i + 1) + ". Призовая игрушка: " + winningToy.name + "\n");
                     fileWriter.flush();
                 } catch (IOException e) {
                     System.out.println("Не удалось записать данные в файл.");
@@ -103,7 +103,7 @@ public class ToyLottery {
         toyLottery.addToy(2, "Кукла", 3, 15);
         toyLottery.addToy(3, "Машинка", 7, 30);
         toyLottery.addToy(4, "Конструктор", 7, 10);
-        toyLottery.addToy(4, "Мишка", 10, 13);
+        toyLottery.addToy(5, "Мишка", 10, 13);
         // Изменение веса
         toyLottery.changeWeight(2, 10); // Изменение веса игрушки с id 2 на 10
         // Запуск розыгрыша
